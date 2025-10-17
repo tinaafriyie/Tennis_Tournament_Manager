@@ -11,6 +11,6 @@ public final class Personne {
     private final Genre genre;              // ex: Genre.FEMME
     private final LocalDate dateNaissance;  // ex: LocalDate.of(1995, 3, 21)
     private final String lieuNaissance;     // ex: "Lille, France"
-    private final LocalDate dateDeces;      // ex: null si vivant
+    private final LocalDate dateDeces;      // ex: null si vivantfefefe
 
    
