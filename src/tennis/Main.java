@@ -3,25 +3,26 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package tennis;
+import java.time.LocalDate;
+import java.util.Scanner;
+
 
 /**
  *
  * @author tina-
  */
 
-import java.time.LocalDate;
-import java.util.Scanner;
 
 /**
  * Main class for managing the tennis tournament system.
  * Provides console-based user interface for creating and running tournaments.
  */
-public class TournamentManager {
+public class Main {
     
     private Tournament tournament;
     private Scanner scanner;
     
-    public TournamentManager() {
+    public Main() {
         this.scanner = new Scanner(System.in);
     }
     
@@ -461,7 +462,7 @@ public class TournamentManager {
      * Main method
      */
     public static void main(String[] args) {
-        TournamentManager manager = new TournamentManager();
+        Main manager = new Main();
         manager.run();
     }
 }
