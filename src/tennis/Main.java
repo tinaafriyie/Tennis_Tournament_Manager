@@ -20,7 +20,7 @@ import java.util.Scanner;
 public class Main {
     
     private Tournament tournament;
-    private Scanner scanner;
+    private final Scanner scanner;
     
     public Main() {
         this.scanner = new Scanner(System.in);
