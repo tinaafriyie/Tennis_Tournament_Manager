@@ -91,8 +91,9 @@ public class Match implements Playable {
     }
     
     /**
-     * Plays the entire match
+     * Plays the entire match (implements Playable)
      */
+    @Override
     public void play() {
         referee.announceMatchStart(player1.getFullName(), player2.getFullName());
         
@@ -306,6 +307,11 @@ public class Match implements Playable {
         return atpWtaPoints;
     }
     
+    /**
+     * Gets the winner of the match (implements Playable)
+     * @return the winning player, or null if match not complete
+     */
+    @Override
     public Player getWinner() {
         return winner;
     }
@@ -314,6 +320,11 @@ public class Match implements Playable {
         return loser;
     }
     
+    /**
+     * Checks if the match is complete (implements Playable)
+     * @return true if match is finished, false otherwise
+     */
+    @Override
     public boolean isComplete() {
         return isComplete;
     }
