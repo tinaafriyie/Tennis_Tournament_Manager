@@ -7,12 +7,6 @@ import java.time.LocalDate;
 import java.time.Period;
 
 /**
- *
- * @author MARJORIE
- */
-
-
-/**
  * Base class representing a person in the tennis tournament system.
  * Contains common attributes for all people (players, referees, spectators).
  */
