@@ -13,14 +13,14 @@ import java.time.LocalDate;
 public class Player extends Person {
     
     /**
-     * Enumerator for playing hand
+     * Enum for playing hand
      */
     public enum Hand {
         RIGHT, LEFT, AMBIDEXTROUS
     }
     
     /**
-     * Enumerator for player gender/category
+     * Enum for player gender/category
      */
     public enum Gender {
         MALE, FEMALE
