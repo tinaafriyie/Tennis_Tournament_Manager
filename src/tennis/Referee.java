@@ -78,6 +78,10 @@ public class Referee extends Person {
     
     /**
      * Announces the score of a game
+     * @param player1Name
+     * @param player1Score
+     * @param player2Name
+     * @param player2Score
      */
     public void announceScore(String player1Name, int player1Score, 
                              String player2Name, int player2Score) {
@@ -105,81 +109,66 @@ public class Referee extends Person {
      * Converts numeric score to tennis scoring system
      */
     private String convertScore(int score) {
-        switch (score) {
-            case 0: return "0";
-            case 1: return "15";
-            case 2: return "30";
-            case 3: return "40";
-            default: return "40";
-        }
+        return switch (score) {
+            case 0 -> "0";
+            case 1 -> "15";
+            case 2 -> "30";
+            case 3 -> "40";
+            default -> "40";
+        };
     }
     
+    
     /**
-     * Announces a game winner
+     * The following defined methods are announcements given by the referee
+     * @param playerName
      */
+    
     public void announceGameWinner(String playerName) {
         System.out.println("Game, " + playerName + "!");
     }
     
-    /**
-     * Announces a set winner
-     */
+   
     public void announceSetWinner(String playerName, int player1Games, int player2Games) {
         System.out.println("Set, " + playerName + "! (" + player1Games + "-" + player2Games + ")");
     }
     
-    /**
-     * Announces a match winner
-     */
+    
     public void announceMatchWinner(String playerName) {
         System.out.println("\n*** MATCH WON BY " + playerName.toUpperCase() + " ***\n");
     }
     
-    /**
-     * Announces a fault
-     */
+    
     public void announceFault(String faultType) {
         System.out.println("Fault! (" + faultType + ")");
     }
     
-    /**
-     * Announces a double fault
-     */
+    
     public void announceDoubleFault(String playerName) {
         System.out.println("Double Fault! Point to opponent.");
     }
     
-    /**
-     * Announces an ace
-     */
+    
     public void announceAce() {
         System.out.println("Ace!");
     }
     
-    /**
-     * Announces a foot fault
-     */
+   
     public void announceFootFault() {
         announceFault("Foot Fault");
     }
     
-    /**
-     * Announces a net fault
-     */
+    
     public void announceNetFault() {
         announceFault("Net");
     }
     
-    /**
-     * Announces out of bounds
-     */
+    
     public void announceOut() {
         System.out.println("Out!");
     }
     
-    /**
-     * Announces ball is in
-     */
+    
     public void announceIn() {
         System.out.println("In!");
     }
@@ -207,7 +196,10 @@ public class Referee extends Person {
     }
     
     /**
-     * Issues a warning to a player
+     * The following are some issues  flagged by the referee, e.g warning to a player, point penalty,game penalty
+     * 
+     * @param playerName
+     * @param reason
      */
     public void issueWarning(String playerName, String reason) {
         System.out.println("WARNING to " + playerName + ": " + reason);
@@ -215,6 +207,8 @@ public class Referee extends Person {
     
     /**
      * Issues a point penalty
+     * @param playerName
+     * @param reason
      */
     public void issuePointPenalty(String playerName, String reason) {
         System.out.println("POINT PENALTY to " + playerName + ": " + reason);
