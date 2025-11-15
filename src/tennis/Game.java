@@ -70,6 +70,7 @@ public class Game implements Playable {
     /**
      * Plays the game until completion
      */
+    @Override
     public void play() {
         referee.announceServer(server.getFullName());
         
@@ -226,10 +227,12 @@ public class Game implements Playable {
         return player2Points;
     }
     
+    @Override
     public Player getWinner() {
         return winner;
     }
     
+    @Override
     public boolean isComplete() {
         return isComplete;
     }
@@ -240,6 +243,7 @@ public class Game implements Playable {
     
     /**
      * Gets the score string for display
+     * @return 
      */
     public String getScoreString() {
         if (isTiebreak) {
@@ -262,13 +266,13 @@ public class Game implements Playable {
             return "40";
         }
         
-        switch (points) {
-            case 0: return "0";
-            case 1: return "15";
-            case 2: return "30";
-            case 3: return "40";
-            default: return "40";
-        }
+        return switch (points) {
+            case 0 -> "0";
+            case 1 -> "15";
+            case 2 -> "30";
+            case 3 -> "40";
+            default -> "40";
+        };
     }
     
     @Override
