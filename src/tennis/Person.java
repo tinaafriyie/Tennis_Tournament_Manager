@@ -11,7 +11,7 @@ import java.time.Period;
  * Contains common attributes for all people (players, referees, spectators).
  */
 public class Person {
-    // Immutable attributes (once set, cannot be modified)
+    // Immutable attributes 
     private final String birthName;
     private final String firstName;
     private final LocalDate birthDate;
