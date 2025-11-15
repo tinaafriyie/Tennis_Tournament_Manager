@@ -15,7 +15,7 @@ import java.util.*;
 public class Tournament {
     
     /**
-     * Enum for Grand Slam tournaments
+     * Enumerator for Grand Slam tournaments
      */
     public enum GrandSlam {
         AUSTRALIAN_OPEN("Melbourne", "Plexicushion", 1, 2),
@@ -172,6 +172,7 @@ public class Tournament {
     
     /**
      * Generates referees for the tournament
+     * @param count
      */
     public void generateReferees(int count) {
         String[] firstNames = {"Carlos", "Mohamed", "Alison", "James", "Eva"};
