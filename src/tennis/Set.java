@@ -65,6 +65,7 @@ public class Set implements Playable {
     /**
      * Plays the set until completion
      */
+    @Override
     public void play() {
         while (!isComplete) {
             // Create and play a game
@@ -155,10 +156,12 @@ public class Set implements Playable {
         return player2Games;
     }
     
+    @Override // Overriding from Playable interface
     public Player getWinner() {
         return winner;
     }
     
+    @Override
     public boolean isComplete() {
         return isComplete;
     }
@@ -177,6 +180,7 @@ public class Set implements Playable {
     
     /**
      * Gets the score string for display
+     * @return 
      */
     public String getScoreString() {
         return player1Games + "-" + player2Games;
@@ -184,6 +188,7 @@ public class Set implements Playable {
     
     /**
      * Gets total games played in the set
+     * @return 
      */
     public int getTotalGames() {
         return player1Games + player2Games;
