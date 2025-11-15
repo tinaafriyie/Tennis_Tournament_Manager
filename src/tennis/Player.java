@@ -13,14 +13,14 @@ import java.time.LocalDate;
 public class Player extends Person {
     
     /**
-     * Enum for playing hand
+     * Enumerator for playing hand
      */
     public enum Hand {
         RIGHT, LEFT, AMBIDEXTROUS
     }
     
     /**
-     * Enum for player gender/category
+     * Enumerator for player gender/category
      */
     public enum Gender {
         MALE, FEMALE
@@ -289,7 +289,7 @@ public class Player extends Person {
      */
     public void encourage() {
         String[] encouragements = {
-            "Come on!", "Let's go!", "Allez!", "Vamos!", "Yes!"
+            "Come on!", "Let's go!", "Allez!", "That's right!", "I trust you Jack!"
         };
         int index = (int) (Math.random() * encouragements.length);
         System.out.println(getFullName() + ": " + encouragements[index]);
@@ -297,6 +297,7 @@ public class Player extends Person {
     
     /**
      * Player disputes a call
+     * @param reason
      */
     public void disputeCall(String reason) {
         System.out.println(getFullName() + " disputes the call: " + reason);
@@ -304,6 +305,7 @@ public class Player extends Person {
     
     /**
      * Gets player statistics summary
+     * @return 
      */
     public String getStatsSummary() {
         StringBuilder sb = new StringBuilder();
