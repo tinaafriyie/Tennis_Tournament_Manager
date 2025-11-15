@@ -214,22 +214,20 @@ public class Referee extends Person {
         System.out.println("POINT PENALTY to " + playerName + ": " + reason);
     }
     
-    /**
-     * Issues a game penalty
-     */
+   
     public void issueGamePenalty(String playerName, String reason) {
         System.out.println("GAME PENALTY to " + playerName + ": " + reason);
     }
     
-    /**
-     * Calls for silence from the crowd
-     */
+    
     public void callForSilence() {
         System.out.println("Quiet please!");
     }
     
     /**
      * Announces the start of a match
+     * @param player1
+     * @param player2
      */
     public void announceMatchStart(String player1, String player2) {
         System.out.println("\n========================================");
@@ -240,6 +238,7 @@ public class Referee extends Person {
     
     /**
      * Announces the server
+     * @param playerName
      */
     public void announceServer(String playerName) {
         System.out.println(playerName + " to serve.");
@@ -247,6 +246,7 @@ public class Referee extends Person {
     
     /**
      * General announcement
+     * @param message
      */
     public void announce(String message) {
         System.out.println("[Referee] " + message);
