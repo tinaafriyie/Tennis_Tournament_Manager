@@ -18,7 +18,7 @@ import java.util.Random;
 public class Match implements Playable {
     
     /**
-     * Enum for match category
+     * Enumerator for match category
      */
     public enum Category {
         MENS_SINGLES, WOMENS_SINGLES
@@ -221,6 +221,7 @@ public class Match implements Playable {
     
     /**
      * Gets number of sets won by player 1
+     * @return 
      */
     public int getPlayer1Sets() {
         int count = 0;
@@ -234,6 +235,7 @@ public class Match implements Playable {
     
     /**
      * Gets number of sets won by player 2
+     * @return 
      */
     public int getPlayer2Sets() {
         int count = 0;
@@ -262,6 +264,7 @@ public class Match implements Playable {
     
     /**
      * Gets full match score as string
+     * @return 
      */
     public String getMatchScoreString() {
         StringBuilder sb = new StringBuilder();
@@ -339,6 +342,7 @@ public class Match implements Playable {
     
     /**
      * Gets match summary for display
+     * @return 
      */
     public String getMatchSummary() {
         StringBuilder sb = new StringBuilder();
