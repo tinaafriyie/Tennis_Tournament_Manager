@@ -3,12 +3,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package tennis;
-
-
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+
+
 
 /**
  * Represents a tennis match between two players.
@@ -28,8 +27,8 @@ public class Match implements Playable {
     private Player player2;
     private Referee referee;
     private Category category;
-    private String level;  // e.g., "First Round", "Quarterfinals", etc.
-    private int atpWtaPoints;  // Ranking points for this round
+    private String level;  
+    private int atpWtaPoints;  
     private Player winner;
     private Player loser;
     private boolean isComplete;
@@ -43,35 +42,36 @@ public class Match implements Playable {
      * @param player2 the second player
      * @param referee the referee officiating the match
      * @param category the match category (MENS_SINGLES or WOMENS_SINGLES)
-     * @param level the tournament level/round (e.g., "Finals", "Semifinals")
+     * @param level the tournament round may be "First Round", "Quarterfinals", etc.
      * @param atpWtaPoints the ranking points awarded for this round
      */
+    
     public Match(Player player1, Player player2, Referee referee, 
-                Category category, String level, int atpWtaPoints) {
+            Category category, String level, int atpWtaPoints ){
         if (player1 == null || player2 == null) {
             throw new IllegalArgumentException("Players cannot be null");
         }
-        if (referee == null) {
-            throw new IllegalArgumentException("Referee cannot be null");
+        if (referee == null){
+            throw new IllegalArgumentException ("Feferee cannot be null");
         }
-        if (category == null) {
-            throw new IllegalArgumentException("Category cannot be null");
+        if (category == null){
+            throw new IllegalArgumentException ("Category cannot be null");
         }
-        if (level == null || level.trim().isEmpty()) {
-            throw new IllegalArgumentException("Level cannot be null or empty");
+        if (level == null || level.trim().isEmpty()){
+            throw new IllegalArgumentException ("Level cannot be null");
         }
-        if (atpWtaPoints < 0) {
-            throw new IllegalArgumentException("ATP/WTA points cannot be negative");
+        if (atpWtaPoints < 0){
+            throw new IllegalArgumentException ("ATP/WTA points cannot be negative");
         }
         
         // Validate gender matches category
         if (category == Category.MENS_SINGLES && 
-            (player1.getGender() != Player.Gender.MALE || player2.getGender() != Player.Gender.MALE)) {
-            throw new IllegalArgumentException("Men's singles requires male players");
+                (player1.getGender() != Player.Gender.MALE || player2.getGender() != Player.Gender.MALE)){
+            throw new IllegalArgumentException ("Men's singles requires male players");
         }
-        if (category == Category.WOMENS_SINGLES && 
-            (player1.getGender() != Player.Gender.FEMALE || player2.getGender() != Player.Gender.FEMALE)) {
-            throw new IllegalArgumentException("Women's singles requires female players");
+        if ( category == Category.WOMENS_SINGLES && 
+                (player1.getGender() != Player.Gender.FEMALE || player2.getGender() != Player.Gender.FEMALE)) {
+            throw new IllegalArgumentException ("Women's singles requires female players");
         }
         
         this.player1 = player1;
@@ -83,7 +83,7 @@ public class Match implements Playable {
         this.winner = null;
         this.loser = null;
         this.isComplete = false;
-        this.sets = new ArrayList<>();
+        this.sets = new ArrayList<> ();
         this.random = new Random();
         
         // Randomly choose initial server
