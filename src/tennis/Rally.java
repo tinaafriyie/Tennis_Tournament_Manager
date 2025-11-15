@@ -14,7 +14,7 @@ import java.util.Random;
 public class Rally {
     
     /**
-     * Enum for rally outcome
+     * Enumerator for rally outcome
      */
     public enum Outcome {
         PLAYER1_WINS,
@@ -209,6 +209,7 @@ public class Rally {
     
     /**
      * Gets the winner of the rally
+     * @return 
      */
     public Player getWinner() {
         if (outcome == Outcome.PLAYER1_WINS || outcome == Outcome.ACE) {
@@ -221,6 +222,7 @@ public class Rally {
     
     /**
      * Gets rally intensity for spectator reactions
+     * @return 
      */
     public double getIntensity() {
         if (isAce) return 1.0;
